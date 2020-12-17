@@ -13,19 +13,27 @@ require('laravel-elixir-vue');
  |
  */
 
-elixir(mix => {
+elixir(function(mix) {
     mix.sass('app.scss')
-       .webpack('app.js');
 
-    styles([
+
+        .styles([
         'libs/bootstrap.css',
+        'libs/blog-posts.css',
+        'libs/font-awesome.css',
+        'libs/sb-admin-2.css',
+        'libs/metisMenu.css',
         'libs/bootstrap-theme.css'
 
-    ], './public/js/libs.css')
+    ], './public/css/libs.css')
 
         .scripts([
+
             'libs/app.js',
-            'libs/bootstrap.js'
+            'libs/bootstrap.js',
+            'libs/jquery.js',
+            'libs/sb-admin-2.js',
+            'libs/scripts.js'
 
 
 
